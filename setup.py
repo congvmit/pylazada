@@ -1,15 +1,11 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
-    name='lazop-sdk-python',
-    version='1.1.0',
-    author='top',
-    author_email='xuteng.xt@alibaba-inc.com',
+    name="pylazada",
+    version="1.0.0",
+    author="Cong Vo",
+    author_email="congvm.it@gmail.com",
     packages=find_packages(),
     install_requires=[],
-    license='MIT',
+    license="MIT",
 )
-

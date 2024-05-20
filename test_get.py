@@ -1,21 +1,24 @@
 # -*- coding: utf-8 -*-
 
-import lazop
+import pylazada
 
 # params 1 : gateway url
 # params 2 : appkey
 # params 3 : appSecret
-client = lazop.LazopClient('https://api.lazada.test/rest', '${appKey}', '${appSecret}')
+app_key = "100627"
+client = pylazada.LazopClient(
+    "https://api.lazada.test/rest", "${appKey}", "${appSecret}"
+)
 
 # create a api request set GET mehotd
 # default http method is POST
-request = lazop.LazopRequest('/mock/api/get','GET')
+request = pylazada.LazopRequest("/mock/api/get", "GET")
 
 # simple type params ,Number ,String
-request.add_api_param('api_id','1')
+request.add_api_param("api_id", "1")
 
 response = client.execute(request)
-#response = client.execute(request,access_token)
+# response = client.execute(request,access_token)
 
 # response type nil,ISP,ISV,SYSTEM
 # nil ：no error
@@ -35,4 +38,3 @@ print(response.request_id)
 
 # full response
 print(response.body)
-    
